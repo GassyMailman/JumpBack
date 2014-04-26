@@ -1,12 +1,13 @@
 {
-  "name": "Jump Back",
+  "name": "Return From Whence You Came!",
   "version": "1",
-  "description": "",
+  "description": "Go back to the last website you were on.",
   "permissions": [
     "activeTab", "tabs", "webNavigation"
   ],
   "browser_action": {
-    "default_title": "Jump back!"
+    "default_title": "RFWYC!",
+    "default_icon": "clock.png"
   },
   "background": {
     "scripts": ["background.js"],

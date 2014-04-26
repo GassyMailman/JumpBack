@@ -23,3 +23,11 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 chrome.tabs.onCreated.addListener(function(tab){
   addTab(tab.id);
 });
+
+chrome.tabs.onRemoved.addListener(function(integer tabId, object removeInfo){
+    deleteTab(tab.id);
+});
+
+chrome.tabs.onUpdated.addListener(function(integer tabId, object changeInfo, Tab tab){
+    addHistoryToTab(tab.id);
+});

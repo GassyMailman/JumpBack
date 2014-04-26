@@ -10,7 +10,7 @@
     "default_icon": "clock.png"
   },
   "background": {
-    "scripts": ["background.js"],
+    "scripts": ["script.js"],
     "persistent": false
   },
   "manifest_version": 2

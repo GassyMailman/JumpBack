@@ -2,14 +2,19 @@ console.log("BLAH");
 
 var tabHistories = {};
 
+//WORKS
 function addTab(id) {
     tabHistories[id] = new Array;
+    console.log(id);
+    console.log(tabHistories[id]);
 }
 
+//WORKS
 function deleteTab(id) {
     delete tabHistories[id];
 }
 
+//PROBLEM: We are currently adding a string url to a number tab id
 function addHistoryToTab(history, tab){
     var hist = tabHistories[tab];
     if (hist == null){
@@ -19,10 +24,12 @@ function addHistoryToTab(history, tab){
     hist.push(history);
 }
 
+//WORKS
 function getImportantPart(URL) {
     return URL.match("http(s)?://[^/]*")[0];
 }
 
+//TEST LATER
 function goBack(tab){
   chrome.tabs.executeScript(tab.id,{
     code: 'goBack()'
@@ -31,7 +38,7 @@ function goBack(tab){
 
 // Called when the user clicks on the browser action.
 chrome.browserAction.onClicked.addListener(function(tab) {
-chrome.tabs.getSelected(null, function(tab){
+    chrome.tabs.getSelected(tab.id, function(){
 
       var history = tabHistories[tab.id];
 

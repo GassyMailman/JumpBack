@@ -9,8 +9,9 @@ chrome.tabs.getSelected(null, function(tab) {
         return tab.url;
 });
 
-var previousWebsite = '';
-var thisWebPage;
+var previousWebsite = 'gffvd    ';
+var thisWebPage = tabUrl;
+var getImportantPart = URL.match("http(s)?://[^/]*")[0];
 
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
     if(changeInfo.status == 'complete'){

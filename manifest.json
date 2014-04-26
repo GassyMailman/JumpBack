@@ -1,12 +1,12 @@
 {
   "name": "Return From Whence You Came!",
   "version": "1",
-  "description": "Go back to the last website you were on.",
+  "description": "The previous website you will return",
   "permissions": [
     "activeTab", "tabs", "webNavigation"
   ],
   "browser_action": {
-    "default_title": "RFWYC!",
+    "default_title": "TPWYWR!",
     "default_icon": "clock.png"
   },
   "background": {
